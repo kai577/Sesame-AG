@@ -23,7 +23,7 @@ env:
   RELEASE_TAG_RAW: ${{ github.ref_name }}
   TARGET_SOURCE_BRANCH: dev
   TARGET_MODULE_REPO: Xposed-Modules-Repo/io.github.aoguai.sesameag
-  PUBLISH_TO_XPOSED_REPO: "false"
+
 
 concurrency:
   group: release-${{ github.ref_name }}
@@ -123,7 +123,7 @@ jobs:
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
           TARGET_REPO_PAT: ${{ secrets.TARGET_REPO_PAT }}
-          PUBLISH_TO_XPOSED_REPO: ${{ env.PUBLISH_TO_XPOSED_REPO }}
+
         run: |
           set -euo pipefail
 
