@@ -2,10 +2,10 @@ name: Release Build
 run-name: Release Build - ${{ github.ref_name }}
 
 on:
-workflow_dispatch:
   push:
     tags:
       - "[0-9]*-*"
+  workflow_dispatch:
 
 env:
   CI: "true"
